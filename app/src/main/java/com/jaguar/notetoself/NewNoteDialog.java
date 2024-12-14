@@ -9,13 +9,17 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.DialogFragment;
 
+import java.util.Objects;
+
 public class NewNoteDialog extends DialogFragment {
+    @NonNull
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-        LayoutInflater inflater = getActivity().getLayoutInflater();
+        LayoutInflater inflater = requireActivity().getLayoutInflater();
         View dialogView = inflater.inflate(R.layout.new_note_dialog, null);
 
         final EditText editTitle = dialogView.findViewById(R.id.noteTitle);
@@ -37,7 +41,7 @@ public class NewNoteDialog extends DialogFragment {
                     checkBoxTodo.isChecked(),
                     checkBoxIdea.isChecked());
             MainActivity callingActivity = (MainActivity) getActivity();
-            callingActivity.createNewNoteDialog(newNote);
+            Objects.requireNonNull(callingActivity).createNewNoteDialog(newNote);
             dismiss();
         });
 

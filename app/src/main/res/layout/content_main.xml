@@ -1,12 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent" >
 
-    <Button
-        android:id="@+id/showbtn"
+    <LinearLayout
+        android:id="@+id/allNotes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:text="Show Note" />
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/NoNotes"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="16dp"
+            android:gravity="center"
+            android:text="No Notes"
+            android:textSize="30sp" />
+    </LinearLayout>
 </ScrollView>
