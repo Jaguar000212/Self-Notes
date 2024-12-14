@@ -53,6 +53,7 @@
         android:layout_marginEnd="16dp"
         android:editable="false"
         android:text="TextView"
+        android:maxHeight="195dp"
         android:hint="@string/note_description"
         android:textAlignment="textStart"
         app:layout_constraintEnd_toEndOf="parent"
