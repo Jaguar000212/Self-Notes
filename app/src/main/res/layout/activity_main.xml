@@ -24,7 +24,8 @@
         android:clickable="true"
         android:contentDescription="Add Note"
         android:foreground="@drawable/add_foreground"
-        app:backgroundTint="@color/add_background"
+        android:foregroundTint="@color/ic_fg"
+        app:backgroundTint="@color/ic_bg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:maxImageSize="50dp" />

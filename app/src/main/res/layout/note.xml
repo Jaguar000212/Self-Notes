@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="8dp"
+    app:cardMaxElevation="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="16dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/NoteTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="Title of Note"
+                android:textSize="34sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/NoteDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="Description of note"
+                android:typeface="monospace" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/ShowNote"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="16dp"
+            android:layout_weight=".25"
+            android:backgroundTint="@color/ic_bg"
+            android:contentDescription="View Note"
+            app:icon="@drawable/ic_forward"
+            app:iconTint="@color/ic_fg" />
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
