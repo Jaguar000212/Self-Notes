@@ -28,7 +28,6 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     List<Note> notes;
-    private RecyclerView recyclerView;
     private NotesRecyclerAdapter noteAdapter;
     private JSONSerializer serializer;
 
@@ -62,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "Error loading notes", Toast.LENGTH_SHORT).show();
         }
 
-        recyclerView = findViewById(R.id.NotesList);
+        RecyclerView recyclerView = findViewById(R.id.NotesList);
         noteAdapter = new NotesRecyclerAdapter(notes, this);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);

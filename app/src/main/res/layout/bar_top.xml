@@ -25,6 +25,7 @@
         android:layout_gravity="center"
         android:layout_weight="0.25"
         android:background="@color/ic_bg"
+        android:contentDescription="Open Settings"
         app:srcCompat="@drawable/ic_settings"
         app:tint="@color/ic_fg" />
 

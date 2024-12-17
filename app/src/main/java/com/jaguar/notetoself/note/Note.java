@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 
 import org.json.JSONObject;
 
+/** @noinspection ALL*/
 public class Note {
     private final String title;
     private final String description;

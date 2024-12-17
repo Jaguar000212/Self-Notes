@@ -28,7 +28,7 @@ public class JSONSerializer {
         this.context = context;
     }
 
-    public void save(List<Note> notes) throws IOException, JSONException {
+    public void save(List<Note> notes) throws IOException {
         JSONArray jsonArray = new JSONArray();
 
         for (Note note : notes) {
@@ -54,7 +54,7 @@ public class JSONSerializer {
             InputStream in = context.openFileInput(filename);
             reader = new BufferedReader(new java.io.InputStreamReader(in));
             StringBuilder jsonString = new StringBuilder();
-            String line = null;
+            String line;
             while ((line = reader.readLine()) != null) {
                 jsonString.append(line);
             }

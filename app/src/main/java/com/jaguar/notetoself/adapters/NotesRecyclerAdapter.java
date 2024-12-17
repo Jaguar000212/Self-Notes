@@ -19,7 +19,7 @@ import java.util.List;
 public class NotesRecyclerAdapter extends RecyclerView.Adapter<NotesRecyclerAdapter.ListItemHolder> {
 
     private final MainActivity nActivity;
-    private List<Note> nList;
+    private final List<Note> nList;
 
     public NotesRecyclerAdapter(List<Note> list, MainActivity activity) {
         nList = list;
