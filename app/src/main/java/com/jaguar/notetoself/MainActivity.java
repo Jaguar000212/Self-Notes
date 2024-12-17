@@ -1,6 +1,8 @@
 package com.jaguar.notetoself;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,6 +16,10 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.jaguar.notetoself.adapters.NotesRecyclerAdapter;
+import com.jaguar.notetoself.dialogs.NewNoteDialog;
+import com.jaguar.notetoself.json.JSONSerializer;
+import com.jaguar.notetoself.note.Note;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,9 +27,10 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    final List<Note> notes = new ArrayList<>();
+    List<Note> notes;
     private RecyclerView recyclerView;
-    private NoteAdapter noteAdapter;
+    private NotesRecyclerAdapter noteAdapter;
+    private JSONSerializer serializer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,8 +49,21 @@ public class MainActivity extends AppCompatActivity {
             dialog.show(getSupportFragmentManager(), "");
         });
 
+        findViewById(R.id.settingsButton).setOnClickListener(view -> {
+            Intent intent = new Intent(this, SettingsActivity.class);
+            startActivity(intent);
+        });
+
+        serializer = new JSONSerializer("NoteToSelf.json", getApplicationContext());
+        try {
+            notes = serializer.load();
+        } catch (Exception e) {
+            notes = new ArrayList<>();
+            Toast.makeText(this, "Error loading notes", Toast.LENGTH_SHORT).show();
+        }
+
         recyclerView = findViewById(R.id.NotesList);
-        noteAdapter = new NoteAdapter(notes, this);
+        noteAdapter = new NotesRecyclerAdapter(notes, this);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
@@ -55,4 +75,19 @@ public class MainActivity extends AppCompatActivity {
         notes.add(newNote);
         noteAdapter.notifyItemInserted(notes.size() - 1);
     }
+
+    public void saveNotes() {
+        try {
+            serializer.save(notes);
+        } catch (Exception e) {
+            Toast.makeText(this, "Error saving notes", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        saveNotes();
+    }
+
 }

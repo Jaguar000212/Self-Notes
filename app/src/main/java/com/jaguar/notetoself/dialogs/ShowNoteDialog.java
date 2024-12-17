@@ -1,4 +1,4 @@
-package com.jaguar.notetoself;
+package com.jaguar.notetoself.dialogs;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -11,6 +11,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.DialogFragment;
 
+import com.jaguar.notetoself.R;
+import com.jaguar.notetoself.note.Note;
+
 public class ShowNoteDialog extends DialogFragment {
     private Note note;
 
@@ -19,7 +22,7 @@ public class ShowNoteDialog extends DialogFragment {
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         android.app.AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         LayoutInflater inflater = requireActivity().getLayoutInflater();
-        View dialogView = inflater.inflate(R.layout.show_note_dialog, null);
+        View dialogView = inflater.inflate(R.layout.dialog_show_note, null);
 
         TextView description = dialogView.findViewById(R.id.snoteDescription);
         description.setText(note.getDescription());

@@ -1,4 +1,4 @@
-package com.jaguar.notetoself;
+package com.jaguar.notetoself.dialogs;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -12,6 +12,10 @@ import android.widget.EditText;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.DialogFragment;
 
+import com.jaguar.notetoself.MainActivity;
+import com.jaguar.notetoself.R;
+import com.jaguar.notetoself.note.Note;
+
 import java.util.Objects;
 
 public class NewNoteDialog extends DialogFragment {
@@ -20,7 +24,7 @@ public class NewNoteDialog extends DialogFragment {
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         LayoutInflater inflater = requireActivity().getLayoutInflater();
-        View dialogView = inflater.inflate(R.layout.new_note_dialog, null);
+        View dialogView = inflater.inflate(R.layout.dialog_new_note, null);
 
         final EditText editTitle = dialogView.findViewById(R.id.noteTitle);
         final EditText editDescription = dialogView.findViewById(R.id.noteDescription);

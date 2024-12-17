@@ -1,4 +1,4 @@
-package com.jaguar.notetoself;
+package com.jaguar.notetoself.adapters;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,27 +9,32 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.jaguar.notetoself.MainActivity;
+import com.jaguar.notetoself.R;
+import com.jaguar.notetoself.dialogs.ShowNoteDialog;
+import com.jaguar.notetoself.note.Note;
+
 import java.util.List;
 
-public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.ListItemHolder> {
+public class NotesRecyclerAdapter extends RecyclerView.Adapter<NotesRecyclerAdapter.ListItemHolder> {
 
     private final MainActivity nActivity;
     private List<Note> nList;
 
-    public NoteAdapter(List<Note> list, MainActivity activity) {
+    public NotesRecyclerAdapter(List<Note> list, MainActivity activity) {
         nList = list;
         nActivity = activity;
     }
 
     @NonNull
     @Override
-    public NoteAdapter.ListItemHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View noteView = LayoutInflater.from(parent.getContext()).inflate(R.layout.note, parent, false);
+    public NotesRecyclerAdapter.ListItemHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View noteView = LayoutInflater.from(parent.getContext()).inflate(R.layout.card_note, parent, false);
         return new ListItemHolder(noteView);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull NoteAdapter.ListItemHolder holder, int position) {
+    public void onBindViewHolder(@NonNull NotesRecyclerAdapter.ListItemHolder holder, int position) {
         Note note = nList.get(position);
         holder.nTitle.setText(note.getTitle());
         if (note.getDescription().length() > 30) {
