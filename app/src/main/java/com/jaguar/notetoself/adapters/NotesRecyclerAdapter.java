@@ -36,9 +36,13 @@ public class NotesRecyclerAdapter extends RecyclerView.Adapter<NotesRecyclerAdap
     @Override
     public void onBindViewHolder(@NonNull NotesRecyclerAdapter.ListItemHolder holder, int position) {
         Note note = nList.get(position);
-        holder.nTitle.setText(note.getTitle());
-        if (note.getDescription().length() > 30) {
-            holder.nDescription.setText(String.format("%s...", note.getDescription().substring(0, 30)));
+        if (note.getTitle().length() > 9) {
+            holder.nTitle.setText(String.format("%s...", note.getTitle().substring(0, 9)));
+        } else {
+            holder.nTitle.setText(note.getTitle());
+        }
+        if (note.getDescription().length() > 24) {
+            holder.nDescription.setText(String.format("%s...", note.getDescription().substring(0, 24)));
         } else holder.nDescription.setText(note.getDescription());
         holder.setNote(note);
     }

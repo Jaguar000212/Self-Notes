@@ -19,16 +19,16 @@ import java.io.Writer;
 import java.util.ArrayList;
 import java.util.List;
 
-public class JSONSerializer {
+public class NotesJSONSerializer {
     private final String filename;
     private final Context context;
 
-    public JSONSerializer(String filename, Context context) {
+    public NotesJSONSerializer(String filename, Context context) {
         this.filename = filename;
         this.context = context;
     }
 
-    public void save(List<Note> notes) throws IOException {
+    public void saveNotes(List<Note> notes) throws IOException {
         JSONArray jsonArray = new JSONArray();
 
         for (Note note : notes) {
@@ -47,7 +47,7 @@ public class JSONSerializer {
         }
     }
 
-    public ArrayList<Note> load() throws IOException, JSONException {
+    public ArrayList<Note> loadNotes() throws IOException, JSONException {
         ArrayList<Note> notes = new ArrayList<>();
         BufferedReader reader = null;
         try {

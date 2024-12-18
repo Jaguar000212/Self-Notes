@@ -18,7 +18,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.jaguar.notetoself.adapters.NotesRecyclerAdapter;
 import com.jaguar.notetoself.dialogs.NewNoteDialog;
-import com.jaguar.notetoself.json.JSONSerializer;
+import com.jaguar.notetoself.json.NotesJSONSerializer;
 import com.jaguar.notetoself.note.Note;
 
 import java.util.ArrayList;
@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
     List<Note> notes;
     private NotesRecyclerAdapter noteAdapter;
-    private JSONSerializer serializer;
+    private NotesJSONSerializer serializer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,9 +53,9 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-        serializer = new JSONSerializer("NoteToSelf.json", getApplicationContext());
+        serializer = new NotesJSONSerializer("Notes.json", getApplicationContext());
         try {
-            notes = serializer.load();
+            notes = serializer.loadNotes();
         } catch (Exception e) {
             notes = new ArrayList<>();
             Toast.makeText(this, "Error loading notes", Toast.LENGTH_SHORT).show();
@@ -70,14 +70,23 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setAdapter(noteAdapter);
     }
 
-    public void createNewNoteDialog(Note newNote) {
+    public void addNewNote(Note newNote) {
         notes.add(newNote);
-        noteAdapter.notifyItemInserted(notes.size() - 1);
+        noteAdapter.notifyItemInserted(notes.size()-1);
+    }
+
+    public void editNote () {
+        noteAdapter.notifyDataSetChanged();
+    }
+
+    public void deleteNote (Note note) {
+        notes.remove(note);
+        noteAdapter.notifyDataSetChanged();
     }
 
     public void saveNotes() {
         try {
-            serializer.save(notes);
+            serializer.saveNotes(notes);
         } catch (Exception e) {
             Toast.makeText(this, "Error saving notes", Toast.LENGTH_SHORT).show();
         }

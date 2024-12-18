@@ -62,19 +62,54 @@
         app:layout_constraintTop_toBottomOf="@+id/menu_layout"
         tools:ignore="Deprecated" />
 
-    <Button
-        android:id="@+id/btn_OK"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
-        android:backgroundTint="@color/ic_bg"
-        android:text="OK"
-        android:textColor="@color/ic_fg"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/snoteDescription"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/snoteDescription">
+
+        <Button
+            android:id="@+id/btn_Edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:backgroundTint="@color/ic_bg"
+            android:gravity="center"
+            android:text="Edit"
+            android:textColor="@color/ic_fg" />
+
+        <Button
+            android:id="@+id/btn_Delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/ic_bg"
+            android:gravity="center"
+            android:text="Delete"
+            android:textColor="@color/ic_fg" />
+
+        <Button
+            android:id="@+id/btn_OK"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:backgroundTint="@color/ic_bg"
+            android:gravity="center"
+            android:text="OK"
+            android:textColor="@color/ic_fg" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

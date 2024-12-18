@@ -18,37 +18,53 @@ import com.jaguar.notetoself.note.Note;
 
 import java.util.Objects;
 
-public class NewNoteDialog extends DialogFragment {
+public class EditNoteDialog extends DialogFragment {
+
+    Note note;
+
     @NonNull
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
+
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         LayoutInflater inflater = requireActivity().getLayoutInflater();
-        View dialogView = inflater.inflate(R.layout.dialog_new_note, null);
+        View dialogView = inflater.inflate(R.layout.dialog_edit_note, null);
 
         final EditText editTitle = dialogView.findViewById(R.id.noteTitle);
         final EditText editDescription = dialogView.findViewById(R.id.noteDescription);
         final CheckBox checkBoxIdea = dialogView.findViewById(R.id.noteIdea);
         final CheckBox checkBoxTodo = dialogView.findViewById(R.id.noteToDo);
         final CheckBox checkBoxImportant = dialogView.findViewById(R.id.noteImportant);
-        final Button buttonAdd = dialogView.findViewById(R.id.noteAdd);
+        final Button buttonAdd = dialogView.findViewById(R.id.noteSave);
         final Button buttonCancel = dialogView.findViewById(R.id.noteCancel);
 
-        builder.setView(dialogView).setTitle("Add a new note");
+        editTitle.setText(note.getTitle());
+        editDescription.setText(note.getDescription());
+        checkBoxIdea.setChecked(note.isIdea());
+        checkBoxTodo.setChecked(note.isTodo());
+        checkBoxImportant.setChecked(note.isImportant());
 
-        buttonCancel.setOnClickListener(v -> dismiss());
+        builder.setView(dialogView).setTitle("Edit note");
 
         buttonAdd.setOnClickListener(v -> {
-            Note newNote = new Note(editTitle.getText().toString(),
-                    editDescription.getText().toString(),
-                    checkBoxImportant.isChecked(),
-                    checkBoxTodo.isChecked(),
-                    checkBoxIdea.isChecked());
+            note.setTitle(editTitle.getText().toString());
+            note.setDescription(editDescription.getText().toString());
+            note.setIdea(checkBoxIdea.isChecked());
+            note.setTodo(checkBoxTodo.isChecked());
+            note.setImportant(checkBoxImportant.isChecked());
+
             MainActivity callingActivity = (MainActivity) getActivity();
-            Objects.requireNonNull(callingActivity).addNewNote(newNote);
+            Objects.requireNonNull(callingActivity).editNote();
             dismiss();
         });
 
+        buttonCancel.setOnClickListener(v -> dismiss());
+
         return builder.create();
     }
+
+    public void sendNoteSelected(Note noteSelected) {
+        note = noteSelected;
+    }
+
 }

@@ -42,8 +42,24 @@ public class ShowNoteDialog extends DialogFragment {
             idea.setVisibility(View.GONE);
         }
 
+        Button buttonEdit = dialogView.findViewById(R.id.btn_Edit);
+        buttonEdit.setOnClickListener(v -> {
+            EditNoteDialog editNoteDialog = new EditNoteDialog();
+            editNoteDialog.sendNoteSelected(note);
+            editNoteDialog.show(getParentFragmentManager(), "EditNoteDialog");
+            dismiss();
+        });
+
         Button buttonOK = dialogView.findViewById(R.id.btn_OK);
         buttonOK.setOnClickListener(v -> dismiss());
+
+        Button buttonDelete = dialogView.findViewById(R.id.btn_Delete);
+        buttonDelete.setOnClickListener(v -> {
+            DeleteNoteDialog deleteNoteDialog = new DeleteNoteDialog();
+            deleteNoteDialog.sendNoteSelected(note);
+            deleteNoteDialog.show(getParentFragmentManager(), "DeleteNoteDialog");
+            dismiss();
+        });
 
         builder.setView(dialogView).setTitle(note.getTitle());
         return builder.create();

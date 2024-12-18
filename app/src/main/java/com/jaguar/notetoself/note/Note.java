@@ -4,13 +4,12 @@ import androidx.annotation.NonNull;
 
 import org.json.JSONObject;
 
-/** @noinspection ALL*/
 public class Note {
-    private final String title;
-    private final String description;
-    private final boolean important;
-    private final boolean todo;
-    private final boolean idea;
+    private String title;
+    private String description;
+    private boolean important;
+    private boolean todo;
+    private boolean idea;
 
 
     public Note(String title, String description, boolean important, boolean todo, boolean idea) {
@@ -33,20 +32,40 @@ public class Note {
         return title;
     }
 
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
     public String getDescription() {
         return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public boolean isImportant() {
         return important;
     }
 
+    public void setImportant(boolean important) {
+        this.important = important;
+    }
+
     public boolean isTodo() {
         return todo;
     }
 
+    public void setTodo(boolean todo) {
+        this.todo = todo;
+    }
+
     public boolean isIdea() {
         return idea;
+    }
+
+    public void setIdea(boolean idea) {
+        this.idea = idea;
     }
 
     @NonNull
