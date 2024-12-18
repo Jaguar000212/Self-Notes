@@ -24,7 +24,7 @@
                 android:id="@+id/NoteTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:contentDescription="Title of Note"
+                android:contentDescription="@string/card_title_desc"
                 android:textSize="34sp"
                 android:textStyle="bold" />
 
@@ -32,7 +32,7 @@
                 android:id="@+id/NoteDescription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:contentDescription="Description of note"
+                android:contentDescription="@string/card_desc_desc"
                 android:typeface="monospace" />
 
         </LinearLayout>
@@ -44,7 +44,7 @@
             android:layout_margin="16dp"
             android:layout_weight=".25"
             android:backgroundTint="@color/ic_bg"
-            android:contentDescription="View Note"
+            android:contentDescription="@string/card_btn_desc"
             app:icon="@drawable/ic_forward"
             app:iconTint="@color/ic_fg" />
     </LinearLayout>

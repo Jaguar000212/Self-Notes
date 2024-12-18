@@ -58,7 +58,6 @@ public class MainActivity extends AppCompatActivity {
             notes = serializer.loadNotes();
         } catch (Exception e) {
             notes = new ArrayList<>();
-            Toast.makeText(this, "Error loading notes", Toast.LENGTH_SHORT).show();
         }
 
         RecyclerView recyclerView = findViewById(R.id.NotesList);
@@ -88,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
         try {
             serializer.saveNotes(notes);
         } catch (Exception e) {
-            Toast.makeText(this, "Error saving notes", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.error_save_text, Toast.LENGTH_SHORT).show();
         }
     }
 

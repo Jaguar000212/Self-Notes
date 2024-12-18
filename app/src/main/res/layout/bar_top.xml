@@ -11,8 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:background="@color/ic_bg"
-        android:contentDescription="TODO"
-        android:text="Self Notes"
+        android:text="@string/app_name"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Display3"
         android:textColor="@color/ic_fg"
@@ -25,7 +24,7 @@
         android:layout_gravity="center"
         android:layout_weight="0.25"
         android:background="@color/ic_bg"
-        android:contentDescription="Open Settings"
+        android:contentDescription="@string/btn_settings_desc"
         app:srcCompat="@drawable/ic_settings"
         app:tint="@color/ic_fg" />
 

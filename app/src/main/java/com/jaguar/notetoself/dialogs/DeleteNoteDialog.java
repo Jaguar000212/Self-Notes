@@ -27,8 +27,8 @@ public class DeleteNoteDialog extends DialogFragment {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         LayoutInflater inflater = requireActivity().getLayoutInflater();
         View dialogView = inflater.inflate(R.layout.dialog_delete_note, null);
-        builder.setTitle("Delete note");
-        builder.setMessage("Are you sure you want to delete this note?");
+        builder.setTitle(R.string.delete_text);
+        builder.setMessage(R.string.delete_desc);
         builder.setView(dialogView);
 
         Button buttonYes = dialogView.findViewById(R.id.btn_deleteYes);

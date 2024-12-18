@@ -17,7 +17,7 @@
         android:layout_marginEnd="16dp"
         android:autofillHints="string"
         android:ems="10"
-        android:hint="@string/note_title_hint"
+        android:hint="@string/new_title_hint"
         android:inputType="text"
         android:maxLength="30"
         app:layout_constraintEnd_toEndOf="parent"
@@ -34,7 +34,7 @@
         android:autofillHints="string"
         android:ems="10"
         android:gravity="start"
-        android:hint="@string/note_description_hint"
+        android:hint="@string/new_description_hint"
         android:inputType="textMultiLine"
         android:textAlignment="gravity"
         app:layout_constraintEnd_toEndOf="parent"
@@ -58,22 +58,22 @@
             android:id="@+id/noteIdea"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/note_idea_hint"
-            android:text="@string/note_idea" />
+            android:hint="@string/new_idea_hint"
+            android:text="@string/new_idea_text" />
 
         <CheckBox
             android:id="@+id/noteToDo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/note_todo_hint"
-            android:text="@string/note_todo" />
+            android:hint="@string/new_todo_hint"
+            android:text="@string/new_todo_text" />
 
         <CheckBox
             android:id="@+id/noteImportant"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/note_important_hint"
-            android:text="@string/note_important" />
+            android:hint="@string/new_important_hint"
+            android:text="@string/new_important_text" />
     </LinearLayout>
 
     <Button
@@ -83,7 +83,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginBottom="16dp"
         android:backgroundTint="@color/ic_bg"
-        android:text="@string/btn_cancel"
+        android:text="@string/btn_cancel_text"
         android:textColor="@color/ic_fg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -95,7 +95,7 @@
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
         android:backgroundTint="@color/ic_bg"
-        android:text="@string/btn_add"
+        android:text="@string/btn_add_text"
         android:textColor="@color/ic_fg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />

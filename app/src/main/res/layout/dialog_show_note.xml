@@ -23,7 +23,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/note_important"
+            android:text="@string/new_important_text"
             android:textAlignment="center" />
 
         <TextView
@@ -31,7 +31,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/note_todo"
+            android:text="@string/new_todo_text"
             android:textAlignment="center" />
 
         <TextView
@@ -39,7 +39,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/note_idea"
+            android:text="@string/new_idea_text"
             android:textAlignment="center" />
 
     </LinearLayout>
@@ -52,9 +52,8 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:editable="false"
-        android:hint="@string/note_description"
+        android:hint="@string/new_description_text"
         android:maxHeight="195dp"
-        android:text="TextView"
         android:textAlignment="textStart"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -83,7 +82,7 @@
             android:layout_weight="1"
             android:backgroundTint="@color/ic_bg"
             android:gravity="center"
-            android:text="Edit"
+            android:text="@string/btn_edit_text"
             android:textColor="@color/ic_fg" />
 
         <Button
@@ -96,7 +95,7 @@
             android:layout_weight="1"
             android:backgroundTint="@color/ic_bg"
             android:gravity="center"
-            android:text="Delete"
+            android:text="@string/btn_delete_text"
             android:textColor="@color/ic_fg" />
 
         <Button
@@ -107,7 +106,7 @@
             android:layout_weight="1"
             android:backgroundTint="@color/ic_bg"
             android:gravity="center"
-            android:text="OK"
+            android:text="@string/btn_ok_text"
             android:textColor="@color/ic_fg" />
 
     </LinearLayout>

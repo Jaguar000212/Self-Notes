@@ -1,21 +1,43 @@
 <resources>
-    <string name="app_name">Note to Self</string>
+    <string name="app_name">Self Notes</string>
 
-    <string name="note_title_hint">Enter title here</string>
+    <string name="new_title_hint">Enter title here</string>
 
-    <string name="note_description">Description</string>
-    <string name="note_description_hint">Enter description here</string>
+    <string name="new_description_text">Description</string>
+    <string name="new_description_hint">Enter description here</string>
 
-    <string name="note_idea">Idea</string>
-    <string name="note_idea_hint">Enter idea here</string>
+    <string name="new_idea_text">Idea</string>
+    <string name="new_idea_hint">Enter idea here</string>
 
-    <string name="note_todo">To-Do</string>
-    <string name="note_todo_hint">Enter to-do here</string>
+    <string name="new_todo_text">To-Do</string>
+    <string name="new_todo_hint">Enter to-do here</string>
 
-    <string name="note_important">Important</string>
-    <string name="note_important_hint">Enter important note here</string>
+    <string name="new_important_text">Important</string>
+    <string name="new_important_hint">Enter important note here</string>
 
-    <string name="btn_cancel">Cancel</string>
+    <string name="delete_text">Delete note</string>
+    <string name="delete_desc">Are you sure you want to delete this note?</string>
 
-    <string name="btn_add">Add</string>
+    <string name="edit_text">Edit note</string>
+    <string name="add_text">Add a new note</string>
+
+    <string name="card_title_desc">Title of Note</string>
+    <string name="card_desc_desc">Description of note</string>
+    <string name="card_btn_desc">View Note</string>
+
+    <string name="settings_fun_text">Just for fun, no use. 😁</string>
+
+    <string name="btn_settings_desc">Open Settings</string>
+
+    <string name="btn_add_text">Add</string>
+    <string name="btn_add_desc">Add Note</string>
+
+    <string name="btn_cancel_text">Cancel</string>
+    <string name="btn_yes_text">Yes</string>
+    <string name="btn_save_text">Save</string>
+    <string name="btn_edit_text">Edit</string>
+    <string name="btn_delete_text">Delete</string>
+    <string name="btn_ok_text">OK</string>
+
+    <string name="error_save_text">Error saving notes</string>
 </resources>

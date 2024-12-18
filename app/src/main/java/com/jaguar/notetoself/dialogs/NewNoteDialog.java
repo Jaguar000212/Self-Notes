@@ -34,7 +34,7 @@ public class NewNoteDialog extends DialogFragment {
         final Button buttonAdd = dialogView.findViewById(R.id.noteAdd);
         final Button buttonCancel = dialogView.findViewById(R.id.noteCancel);
 
-        builder.setView(dialogView).setTitle("Add a new note");
+        builder.setView(dialogView).setTitle(R.string.add_text);
 
         buttonCancel.setOnClickListener(v -> dismiss());
 

@@ -44,7 +44,7 @@ public class EditNoteDialog extends DialogFragment {
         checkBoxTodo.setChecked(note.isTodo());
         checkBoxImportant.setChecked(note.isImportant());
 
-        builder.setView(dialogView).setTitle("Edit note");
+        builder.setView(dialogView).setTitle(R.string.edit_text);
 
         buttonAdd.setOnClickListener(v -> {
             note.setTitle(editTitle.getText().toString());
