@@ -2,12 +2,12 @@
 <project version="4">
   <component name="deploymentTargetSelector">
     <selectionStates>
-      <SelectionState runConfigName="app">
+      <SelectionState runConfigName="Build/Run">
         <option name="selectionMode" value="DROPDOWN" />
-        <DropdownSelection timestamp="2024-12-17T17:40:05.474799707Z">
+        <DropdownSelection timestamp="2024-12-18T10:22:27.773972741Z">
           <Target type="DEFAULT_BOOT">
             <handle>
-              <DeviceId pluginId="PhysicalDevice" identifier="serial=10BD5R02BG0004G" />
+              <DeviceId pluginId="LocalEmulator" identifier="path=/home/jaguar000212/.android/avd/Pixel_6_Pro_API_30.avd" />
             </handle>
           </Target>
         </DropdownSelection>

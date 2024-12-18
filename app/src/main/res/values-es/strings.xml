@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Notas personales</string>
+
+    <string name="new_title_hint">Introduce el título aquí</string>
+
+    <string name="new_description_text">Descripción</string>
+    <string name="new_description_hint">Introduce la descripción aquí</string>
+
+    <string name="new_idea_text">Idea</string>
+    <string name="new_idea_hint">Introduce la idea aquí</string>
+
+    <string name="new_todo_text">Por hacer</string>
+    <string name="new_todo_hint">Introduce la tarea aquí</string>
+
+    <string name="new_important_text">Importante</string>
+    <string name="new_important_hint">Introduce la nota importante aquí</string>
+
+    <string name="delete_text">Eliminar nota</string>
+    <string name="delete_desc">¿Estás seguro de que quieres eliminar esta nota?</string>
+
+    <string name="edit_text">Editar nota</string>
+    <string name="add_text">Añadir una nueva nota</string>
+
+    <string name="card_title_desc">Título de la nota</string>
+    <string name="card_desc_desc">Descripción de la nota</string>
+    <string name="card_btn_desc">Ver nota</string>
+
+    <string name="settings_fun_text">Solo por diversión, no tiene uso. 😁</string>
+
+    <string name="btn_settings_desc">Abrir ajustes</string>
+
+    <string name="btn_add_text">Añadir</string>
+    <string name="btn_add_desc">Añadir nota</string>
+
+    <string name="btn_cancel_text">Cancelar</string>
+    <string name="btn_yes_text">Sí</string>
+    <string name="btn_save_text">Guardar</string>
+    <string name="btn_edit_text">Editar</string>
+    <string name="btn_delete_text">Eliminar</string>
+    <string name="btn_ok_text">Aceptar</string>
+
+    <string name="error_save_text">Error al guardar las notas</string>
+</resources>
