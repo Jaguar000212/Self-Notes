@@ -1,4 +1,4 @@
-package com.jaguar.notetoself.note;
+package com.jaguar.selfnotes.note;
 
 import androidx.annotation.NonNull;
 

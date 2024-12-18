@@ -1,4 +1,4 @@
-package com.jaguar.notetoself.dialogs;
+package com.jaguar.selfnotes.dialogs;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -11,8 +11,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.DialogFragment;
 
-import com.jaguar.notetoself.R;
-import com.jaguar.notetoself.note.Note;
+import com.jaguar.selfnotes.R;
+import com.jaguar.selfnotes.note.Note;
 
 public class ShowNoteDialog extends DialogFragment {
     private Note note;

@@ -1,9 +1,9 @@
-package com.jaguar.notetoself.json;
+package com.jaguar.selfnotes.json;
 
 import android.content.Context;
 import android.util.Log;
 
-import com.jaguar.notetoself.note.Note;
+import com.jaguar.selfnotes.note.Note;
 
 import org.json.JSONArray;
 import org.json.JSONException;

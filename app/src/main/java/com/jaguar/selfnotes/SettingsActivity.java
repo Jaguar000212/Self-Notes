@@ -1,4 +1,4 @@
-package com.jaguar.notetoself;
+package com.jaguar.selfnotes;
 
 import android.os.Bundle;
 

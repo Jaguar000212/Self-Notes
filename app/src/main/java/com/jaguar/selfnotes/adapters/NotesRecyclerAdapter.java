@@ -1,4 +1,4 @@
-package com.jaguar.notetoself.adapters;
+package com.jaguar.selfnotes.adapters;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,10 +9,10 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.jaguar.notetoself.MainActivity;
-import com.jaguar.notetoself.R;
-import com.jaguar.notetoself.dialogs.ShowNoteDialog;
-import com.jaguar.notetoself.note.Note;
+import com.jaguar.selfnotes.MainActivity;
+import com.jaguar.selfnotes.R;
+import com.jaguar.selfnotes.dialogs.ShowNoteDialog;
+import com.jaguar.selfnotes.note.Note;
 
 import java.util.List;
 

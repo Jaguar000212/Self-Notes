@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "com.jaguar.notetoself"
+    namespace = "com.jaguar.selfnotes"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.jaguar.notetoself"
+        applicationId = "com.jaguar.selfnotes"
         minSdk = 30
         targetSdk = 34
         versionCode = 1

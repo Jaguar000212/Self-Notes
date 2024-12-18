@@ -1,4 +1,4 @@
-package com.jaguar.notetoself;
+package com.jaguar.selfnotes;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,10 +16,10 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.jaguar.notetoself.adapters.NotesRecyclerAdapter;
-import com.jaguar.notetoself.dialogs.NewNoteDialog;
-import com.jaguar.notetoself.json.NotesJSONSerializer;
-import com.jaguar.notetoself.note.Note;
+import com.jaguar.selfnotes.adapters.NotesRecyclerAdapter;
+import com.jaguar.selfnotes.dialogs.NewNoteDialog;
+import com.jaguar.selfnotes.json.NotesJSONSerializer;
+import com.jaguar.selfnotes.note.Note;
 
 import java.util.ArrayList;
 import java.util.List;
