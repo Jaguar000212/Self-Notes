@@ -13,9 +13,6 @@
         android:theme="@style/Theme.NoteToSelf"
         tools:targetApi="31">
         <activity
-            android:name=".SettingsActivity"
-            android:exported="false" />
-        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
