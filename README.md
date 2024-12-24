@@ -27,7 +27,7 @@
 ## 🛠️ Technologies Used
 
 - **Java**: Core language for development.
-- **XML Layouts (Viewa)**: For building the user interface.
+- **XML Layouts (Views)**: For building the user interface.
 - **JSON Objects**: To store notes locally and securely.
 
 ---
