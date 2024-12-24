@@ -25,10 +25,6 @@
     <string name="card_desc_desc">Description of note</string>
     <string name="card_btn_desc">View Note</string>
 
-    <string name="settings_fun_text">Just for fun, no use. 😁</string>
-
-    <string name="btn_settings_desc">Open Settings</string>
-
     <string name="btn_add_text">Add</string>
     <string name="btn_add_desc">Add Note</string>
 
