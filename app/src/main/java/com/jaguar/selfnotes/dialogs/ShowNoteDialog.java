@@ -2,6 +2,7 @@ package com.jaguar.selfnotes.dialogs;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -59,6 +60,29 @@ public class ShowNoteDialog extends DialogFragment {
             deleteNoteDialog.sendNoteSelected(note);
             deleteNoteDialog.show(getParentFragmentManager(), "DeleteNoteDialog");
             dismiss();
+        });
+
+        Button buttonShare = dialogView.findViewById(R.id.btn_Share);
+        buttonShare.setOnClickListener(v -> {
+            StringBuilder tags = new StringBuilder();
+            if (note.isImportant()) {
+                tags.append("[Important] ");
+            }
+            if (note.isTodo()) {
+                tags.append("[To-Do] ");
+            }
+            if (note.isIdea()) {
+                tags.append("[Idea] ");
+            }
+            String shareText = "Title: " + note.getTitle() +
+                    "\nDescription:\n" + note.getDescription() +
+                    "\n\nTags: " + tags;
+            Intent sendIntent = new Intent();
+            sendIntent.setAction(Intent.ACTION_SEND);
+            sendIntent.putExtra(Intent.EXTRA_TEXT, shareText);
+            sendIntent.setType("text/plain");
+            Intent shareIntent = Intent.createChooser(sendIntent, null);
+            startActivity(shareIntent);
         });
 
         builder.setView(dialogView).setTitle(note.getTitle());
