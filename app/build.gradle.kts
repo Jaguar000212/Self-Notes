@@ -10,7 +10,7 @@ android {
         applicationId = "com.jaguar.selfnotes"
         minSdk = 30
         targetSdk = 34
-        versionName = "3.5"
+        versionName = "4.0"
         vectorDrawables.useSupportLibrary = true
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         signingConfig = signingConfigs.getByName("debug")

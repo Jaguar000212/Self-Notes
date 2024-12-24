@@ -26,10 +26,6 @@
     <string name="card_desc_desc">Descripción de la nota</string>
     <string name="card_btn_desc">Ver nota</string>
 
-    <string name="settings_fun_text">Solo por diversión, no tiene uso. 😁</string>
-
-    <string name="btn_settings_desc">Abrir ajustes</string>
-
     <string name="btn_add_text">Añadir</string>
     <string name="btn_add_desc">Añadir nota</string>
 
