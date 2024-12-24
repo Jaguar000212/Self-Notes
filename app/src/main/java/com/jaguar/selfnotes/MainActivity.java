@@ -1,6 +1,5 @@
 package com.jaguar.selfnotes;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -48,11 +47,6 @@ public class MainActivity extends AppCompatActivity {
             dialog.show(getSupportFragmentManager(), "");
         });
 
-        findViewById(R.id.settingsButton).setOnClickListener(view -> {
-            Intent intent = new Intent(this, SettingsActivity.class);
-            startActivity(intent);
-        });
-
         serializer = new NotesJSONSerializer("Notes.json", getApplicationContext());
         try {
             notes = serializer.loadNotes();
@@ -71,14 +65,14 @@ public class MainActivity extends AppCompatActivity {
 
     public void addNewNote(Note newNote) {
         notes.add(newNote);
-        noteAdapter.notifyItemInserted(notes.size()-1);
+        noteAdapter.notifyItemInserted(notes.size() - 1);
     }
 
-    public void editNote () {
+    public void editNote() {
         noteAdapter.notifyDataSetChanged();
     }
 
-    public void deleteNote (Note note) {
+    public void deleteNote(Note note) {
         notes.remove(note);
         noteAdapter.notifyDataSetChanged();
     }
