@@ -6,15 +6,12 @@
     android:orientation="horizontal">
 
     <TextView
-        android:id="@+id/head"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:background="@color/ic_bg"
         android:text="@string/app_name"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Display3"
-        android:textColor="@color/ic_fg"
         android:textStyle="bold|italic" />
 
     <ImageButton
@@ -23,9 +20,7 @@
         android:layout_height="match_parent"
         android:layout_gravity="center"
         android:layout_weight="0.25"
-        android:background="@color/ic_bg"
         android:contentDescription="@string/btn_settings_desc"
-        app:srcCompat="@drawable/ic_settings"
-        app:tint="@color/ic_fg" />
+        app:srcCompat="@drawable/ic_settings" />
 
 </LinearLayout>

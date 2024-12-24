@@ -17,7 +17,6 @@
         app:layout_constraintVertical_bias="0.0">
 
         <include
-            android:id="@+id/include"
             layout="@layout/bar_top"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -27,7 +26,6 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <include
-            android:id="@+id/include2"
             layout="@layout/contents_notes_list"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -45,8 +43,6 @@
         android:clickable="true"
         android:contentDescription="@string/btn_add_desc"
         android:foreground="@drawable/ic_add"
-        android:foregroundTint="@color/ic_fg"
-        app:backgroundTint="@color/ic_bg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:maxImageSize="50dp" />

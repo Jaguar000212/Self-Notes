@@ -62,6 +62,7 @@
         tools:ignore="Deprecated" />
 
     <LinearLayout
+        style="?android:attr/buttonBarStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -76,38 +77,35 @@
 
         <Button
             android:id="@+id/btn_Edit"
+            style="?android:attr/buttonBarButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="1"
-            android:backgroundTint="@color/ic_bg"
             android:gravity="center"
-            android:text="@string/btn_edit_text"
-            android:textColor="@color/ic_fg" />
+            android:text="@string/btn_edit_text" />
 
         <Button
             android:id="@+id/btn_Delete"
+            style="?android:attr/buttonBarButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:layout_weight="1"
-            android:backgroundTint="@color/ic_bg"
             android:gravity="center"
-            android:text="@string/btn_delete_text"
-            android:textColor="@color/ic_fg" />
+            android:text="@string/btn_delete_text" />
 
         <Button
             android:id="@+id/btn_OK"
+            style="?android:attr/buttonBarButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="1"
-            android:backgroundTint="@color/ic_bg"
             android:gravity="center"
-            android:text="@string/btn_ok_text"
-            android:textColor="@color/ic_fg" />
+            android:text="@string/btn_ok_text"/>
 
     </LinearLayout>
 
