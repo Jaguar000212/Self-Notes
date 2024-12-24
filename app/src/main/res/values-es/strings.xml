@@ -40,5 +40,6 @@
     <string name="btn_delete_text">Eliminar</string>
     <string name="btn_ok_text">Aceptar</string>
 
+    <string name="btn_share_text">Compartir</string>
     <string name="error_save_text">Error al guardar las notas</string>
 </resources>

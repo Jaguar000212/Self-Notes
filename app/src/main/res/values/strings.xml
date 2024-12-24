@@ -38,6 +38,7 @@
     <string name="btn_edit_text">Edit</string>
     <string name="btn_delete_text">Delete</string>
     <string name="btn_ok_text">OK</string>
+    <string name="btn_share_text">Share</string>
 
     <string name="error_save_text">Error saving notes</string>
 </resources>
