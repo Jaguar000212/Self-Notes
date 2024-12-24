@@ -41,7 +41,9 @@ public class NotesRecyclerAdapter extends RecyclerView.Adapter<NotesRecyclerAdap
         } else {
             holder.nTitle.setText(note.getTitle());
         }
-        if (note.getDescription().length() > 24) {
+        if (note.getDescription().indexOf("\n") < 24 && note.getDescription().contains("\n")) {
+            holder.nDescription.setText(String.format("%s...", note.getDescription().substring(0, note.getDescription().indexOf("\n"))));
+        } else if (note.getDescription().length() > 24) {
             holder.nDescription.setText(String.format("%s...", note.getDescription().substring(0, 24)));
         } else holder.nDescription.setText(note.getDescription());
         holder.setNote(note);
